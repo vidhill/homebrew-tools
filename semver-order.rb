@@ -5,20 +5,20 @@
 class SemverOrder < Formula
   desc ""
   homepage "https://github.com/vidhill/homebrew-tools"
-  version "0.0.4"
+  version "0.0.5"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vidhill/semver-order-cli/releases/download/v0.0.4/semver-order-cli_0.0.4_Darwin_x86_64.tar.gz"
-      sha256 "40345633d2c855012765073354b96af2664139f81a53e6e40576012585456b18"
+      url "https://github.com/vidhill/semver-order-cli/releases/download/v0.0.5/semver-order-cli_0.0.5_Darwin_x86_64.tar.gz"
+      sha256 "b4d121b496500f4a29e409d75cb80a8f3b007618b7ff8d058bfe6bf4d751ee8d"
 
       def install
         bin.install "semver-order"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vidhill/semver-order-cli/releases/download/v0.0.4/semver-order-cli_0.0.4_Darwin_arm64.tar.gz"
-      sha256 "497bf1131d8f1863822ac7cd62c9c7bf9f04cb6fdb3b47f6ae93c15a2d0ce82b"
+      url "https://github.com/vidhill/semver-order-cli/releases/download/v0.0.5/semver-order-cli_0.0.5_Darwin_arm64.tar.gz"
+      sha256 "bf5fc5981b81efe3468432754fbd59f44b14df637a04d5f9732e0b810b7f68ed"
 
       def install
         bin.install "semver-order"
@@ -27,17 +27,17 @@ class SemverOrder < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vidhill/semver-order-cli/releases/download/v0.0.4/semver-order-cli_0.0.4_Linux_arm64.tar.gz"
-      sha256 "871e6bab95ec6e17e3f7409f499919c42b90b0ab27dbe21eee800671c1aed982"
+    if Hardware::CPU.intel?
+      url "https://github.com/vidhill/semver-order-cli/releases/download/v0.0.5/semver-order-cli_0.0.5_Linux_x86_64.tar.gz"
+      sha256 "d374d80f48b655f6868255219d39be682d29c5f2bd69469780eefa9e77ace7c4"
 
       def install
         bin.install "semver-order"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/vidhill/semver-order-cli/releases/download/v0.0.4/semver-order-cli_0.0.4_Linux_x86_64.tar.gz"
-      sha256 "9ddd5a2afef4d8c4f42fcbb5eab9c24bf4737408d371a098d7696fbc408ce81d"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/vidhill/semver-order-cli/releases/download/v0.0.5/semver-order-cli_0.0.5_Linux_arm64.tar.gz"
+      sha256 "827bf2c3e341c4166871ac74264b5f173ce8907e35618652f55bc548e1d0e960"
 
       def install
         bin.install "semver-order"
